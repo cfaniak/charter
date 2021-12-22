@@ -1,0 +1,20 @@
+spring:
+  sql:
+    init:
+      data-locations: classpath:initail_data.sql
+  datasource:
+    url: jdbc:h2:mem:charter
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+      show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
