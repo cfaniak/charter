@@ -73,7 +73,7 @@ class RewardServiceFirstMonthTest extends RewardServiceBaseTest {
                         firstMonthTransaction));
 
         //when
-        RewardDto actualRewardDto = rewardService.calculate(TEST_CLIENT_ID, LocalDate.now());
+        RewardDto actualRewardDto = rewardService.calculate(TEST_CLIENT_ID, LocalDate.parse("2021-12-22"));
 
         //then
         assertThat(actualRewardDto.getFirstMonthPoints(), CoreMatchers.equalTo(OVER_100_SCORE));

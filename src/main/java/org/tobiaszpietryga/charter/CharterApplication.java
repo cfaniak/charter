@@ -15,20 +15,7 @@ import org.tobiaszpietryga.charter.model.Client;
 
 @SpringBootApplication
 public class CharterApplication {
-
-//    @Autowired
-//    private ClientRepository clientRepository;
-//    @Autowired
-//    private TransactionsController transactionsController;
-
     public static void main(String[] args) {
         SpringApplication.run(CharterApplication.class, args);
     }
-
-//    @PostConstruct
-//    private void importData() throws URISyntaxException {
-//        clientRepository.save(new Client(1l, "John", "john@rambo"));
-//        transactionsController
-//                .createTransaction(new TransactionDto(60l, Date.valueOf(LocalDate.parse("2021-10-23")), 1l));
-//    }
 }

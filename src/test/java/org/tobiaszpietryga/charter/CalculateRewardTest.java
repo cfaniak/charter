@@ -25,7 +25,7 @@ public class CalculateRewardTest extends IntegrationBaseTest {
     public void shouldReturnTransactionsForClientOne()
             throws Exception {
 
-        mvc.perform(get("/rewards/1")
+        mvc.perform(get("/rewards/1?date=2022-01-14")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content()
@@ -40,7 +40,7 @@ public class CalculateRewardTest extends IntegrationBaseTest {
     public void shouldReturnMessageWhenClientNotExists()
             throws Exception {
 
-        mvc.perform(get("/rewards/55")
+        mvc.perform(get("/rewards/55?date=2022-01-14")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest())
                 .andExpect(content()

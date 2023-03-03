@@ -45,7 +45,8 @@ public class TransactionsController {
         newTransaction.setDate(transactionDto.getDate());
         newTransaction.setClient(client);
         Transaction savedTransaction = transactionRepository.save(newTransaction);
-        return ResponseEntity.created(new URI("/transactions/" + savedTransaction.getId())).body("not yet implemented");
+        return ResponseEntity.created(new URI("/transactions/" + savedTransaction.getId()))
+                .build();
     }
 
     @PostConstruct
